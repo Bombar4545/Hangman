@@ -11,31 +11,27 @@ public class Main
     
     public static void main(String[] args)
     {
-        String allLetters = _allLetters;
-        String usedLetters = _usedLetters;
-        String availableLetters;
-        String[] allLettersArray = new String[allLetters.length()];
-        String[] usedLettersArray = new String[usedLetters.length()];
-        
-        for( int i = 0; i < allLetters.length(); i++) {
-            allLettersArray[i] = allLetters.charAt(i) + "";
-        }
-        
-        for( int i = 0; i < usedLetters.length(); i++) {
-            usedLettersArray[i] = usedLetters.charAt(i) + "";
-        }
-        
-        availableLetters = "";
-        for( int i = 0; i < allLettersArray.length; i++) {
-            for( int j = 0; j < usedLettersArray.length; j++) {
-                if( usedLettersArray[j].equals( allLettersArray[i] ) ) {
+        System.out.println( getAvailableLetters(_allLetters, _usedLetters) );
+    }
+    
+    public static String getAvailableLetters(String allLetters, String usedLetters)
+    {
+        String availableLetters = "";
+        for( int i = 0; i < allLetters.length(); i++)
+        {
+            for( int j = 0; j < usedLetters.length(); j++)
+            {
+                if( usedLetters.charAt( j ) == allLetters.charAt( i ) )
+                {
                     availableLetters += "_ ";
                 }
-                else {
-                    availableLetters += allLettersArray[i] + " ";
+                else
+                {
+                    availableLetters += allLetters.charAt( i ) + " ";
                 }
             }
         }
+        return availableLetters;
     }
     
     
