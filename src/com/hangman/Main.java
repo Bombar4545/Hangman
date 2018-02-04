@@ -14,6 +14,7 @@ public class Main {
       
       
       availableLetters = "";
+      int n = 0;
       for( int i = 0; i < allLettersArray.length; i++) {
          if( usedLetters.indexOf(allLettersArray[i]) >= 0) {
             availableLetters +=  "_ ";
@@ -21,7 +22,12 @@ public class Main {
          else {
             availableLetters += allLettersArray[i] + " ";
          }
+         if( n % 13 == 0 ) {
+            availableLetters += "\n";
+         }
+         n++;
       }
+      
       System.out.println( availableLetters );
    }
 }
