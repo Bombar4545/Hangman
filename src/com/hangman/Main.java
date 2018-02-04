@@ -22,7 +22,7 @@ public class Main {
         availableLetters = "";
     	for( int i = 0; i < allLettersArray.length; i++) {
     	    for( int j = 0; j < usedLettersArray.length; j++) {
-    	        if( usedLettersArray[j].equals( allLetters[i] ) ) {
+    	        if( usedLettersArray[j].equals( allLettersArray[i] ) ) {
     	            availableLetters += "_ ";
                 }
                 else {
