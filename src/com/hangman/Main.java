@@ -36,16 +36,18 @@ public class Main {
                         System.out.println("Input a VALID option!");
                     }
                     if (!quit) {
-                        //Code for the game is over here!!!!
-                        if (game.isGameOver()) {
+
+                        while ( !game.isGameOver()) {
+                            //Code for the game is over here!!!!
+                        }
                             if (game.hasLost()) {
                                 System.out.println("You Lost");
                             } else {
                                 System.out.println("Winner Winner Chicken Dinner!!!");
                             }
                         }
-                    }
-                } while (!(quit));
+                    }while(!quit);
+                }
             }
         }
     }
