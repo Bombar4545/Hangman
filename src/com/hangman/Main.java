@@ -110,9 +110,4 @@ public class Main
         }
         while ( !quit );
     }
-    
-    public static String lol()
-    {
-    
-    }
 }
