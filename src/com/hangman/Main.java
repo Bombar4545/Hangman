@@ -1,40 +1,88 @@
-
 package com.hangman;
 
 import java.util.Scanner;
 
 public class Main
 {
-    
-    static String _allLetters = "abcdefg";
-    static String _usedLetters = "af";
-    
-    public static void main(String[] args)
+    public static void main( String[] args )
     {
-        System.out.println( getAvailableLetters(_allLetters, _usedLetters) );
-    }
-    
-    public static String getAvailableLetters(String allLetters, String usedLetters)
-    {
+        Scanner scan = new Scanner( System.in );
+        String allLetters = "";
+        String usedLetters = "";
         String availableLetters = "";
-        for( int i = 0; i < allLetters.length(); i++)
+        boolean quit;
+        int option;
+        
+        Hangman game = new Hangman();
+        quit = false;
+        
+        do
         {
-            for( int j = 0; j < usedLetters.length(); j++)
+            System.out.println("1-Start\n2-Quit");
+            option = scan.nextInt();
+    
+            if (option == 1)
             {
-                if( usedLetters.charAt( j ) == allLetters.charAt( i ) )
-                {
-                    availableLetters += "_ ";
+                quit = false;
+            }
+            else if (option == 2)
+            {
+                quit = true;
+                System.out.println("GoodBye!!");
+            }
+            else
+            {
+                System.out.println("Input a VALID option!");
+            }
+    
+            if ( !quit )
+            {
+                //C
+    
+                String allLetters = game.getAllLetters();
+                String usedLetters = game.getUsedLetters();
+                String availableLetters;
+    
+                for( int i = 0; i < allLetters.length(); i++) {
+                    allLettersArray[i] = allLetters.charAt(i);
                 }
-                else
+    
+    
+                availableLetters = "";
+                int n = 0;
+                for( int i = 0; i < allLettersArray.length; i++) {
+                    if( usedLetters.indexOf(allLettersArray[i]) >= 0) {
+                        availableLetters +=  "_ ";
+                    }
+                    else {
+                        availableLetters += allLettersArray[i] + " ";
+                    }
+                    if( n % 13 == 0 ) {
+                        availableLetters += "\n";
+                    }
+                    n++;
+                }
+                
+                //Code for the game is over here!!!!
+                if( game.isGameOver() )
                 {
-                    availableLetters += allLetters.charAt( i ) + " ";
+                    if ( game.hasLost() )
+                    {
+                        System.out.println("You Lost");
+                    }
+                    else
+                    {
+                        System.out.println("Winner Winner Chicken Dinner!!!");
+                    }
                 }
             }
+            
         }
-        return availableLetters;
+        while ( !quit );
     }
     
+    public static String lol()
+    {
     
-    
-    
+    }
 }
