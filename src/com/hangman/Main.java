@@ -1,20 +1,22 @@
 package com.hangman;
-
+import java.util.Scanner;
+/**
+ * Hangman Game Main Method = 1, Section 2. CS 102
+ * @author Group C, Ege Hakan KARAAGAC, Ege Ozan Ozyedek, Ufuk Bombar, Ata Sonat Uzun, Taha Khurram, Muhammad Saboor.
+ * @version 4/2/2018, 1.00
+ */
 public class Main {
 
-    public static void main(String[] args)
-    {
-
+    public static void main(String[] args) {
         public class Main {
 
-            public static void main(String[] args)
-            {
-                Scanner scan = new Scanner( System.in);
+            public static void main(String[] args) {
+                Scanner scan = new Scanner(System.in);
                 //Constants
 
                 //Variable
-                //String guess;
-                //Hangman game;
+                String guess;
+                Hangman game;
                 boolean quit;
                 int option;
 
@@ -25,25 +27,18 @@ public class Main {
                 do {
                     System.out.println("1-Start\n2-Quit");
                     option = scan.nextInt();
-                    if (option == 1)
-                    {
+                    if (option == 1) {
                         quit = false;
-                    }
-                    else if (option == 2)
-                    {
+                    } else if (option == 2) {
                         quit = true;
                         System.out.println("GoodBye!!");
-                    }
-                    else
-                    {
+                    } else {
                         System.out.println("Input a VALID option!");
                     }
-                    if ( !quit)
-                    {
+                    if (!quit) {
                         //Code for the game is over here!!!!
-                        if( game.isGameOver())
-                        {
-                            if ( game.hasLost()) {
+                        if (game.isGameOver()) {
+                            if (game.hasLost()) {
                                 System.out.println("You Lost");
                             } else {
                                 System.out.println("Winner Winner Chicken Dinner!!!");
@@ -51,11 +46,7 @@ public class Main {
                         }
                     }
                 } while (!(quit));
-
-
-
-
             }
-
         }
-
+    }
+}
