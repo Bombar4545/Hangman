@@ -1,8 +1,17 @@
 import java.util.Scanner;
 
-
+/**
+ * Hangman Game Main Method = 1, Section 2. CS 102
+ * @author Group C: Ege Hakan KARAAGAC, Ege Ozan Ozyedek, Ufuk Bombar, Ata Sonat Uzun, Taha Khurram, Muhammad Saboor.
+ * @version 4/2/2018, 1.00
+*/
 public class Main
 {
+	/**
+  	* main method: operates hangman game
+  	* @params args String Array args
+  	* @return void
+  	*/
 	public static void main( String[] args)
 	{
 		//declaring variables
