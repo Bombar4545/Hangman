@@ -34,8 +34,7 @@ public class Main2
 				System.out.print( "The letter is not valid" );
 			else if ( tmp == -2 )
 				System.out.println( "The letter was already used" );
-			else if ( tmp == -3 );
-			else
+			else if ( tmp > 0 )
 				System.out.print( tmp + "matchs!!!" );
 			
 		}
