@@ -1,0 +1,31 @@
+/** Ufuk BOMBAR CS102 Hangman Homework Reflection Task **/
+
+
+Problems that occurred during the merge operation:
+    + Some of the functions are used without knowing the parameters, that caused whole program to fail.
+    + Probably the biggest issue is the non-compliance problem. It caused unreadable codes. Thanks to god that there are automatic code formatters out.
+    + Some of the javadoc params written without specifying the name. That caused javadoc errors.
+    + Major bug is the space that counted as a char.
+
+Bugs: ( + exists, F fixed, D disappeared )
+    F BUG #001: Cannot load the dictionary file.
+    F BUG #002: Space counted as a char, user cannot see the spaces.
+    F BUG #003: Javadocs are not correct.
+    F BUG #004: Some of the method parameters causes errors.
+    D BUG #005: Last element of temp-dictionary is problematic, game does not end.
+    F BUG #006: Getting a NullPointerException on StringBuffer() constructor.
+    F BUG #007: Multi-character inputs does not ignored.
+    F BUG #008: Case sensitive problem.
+    F BUG #009: Unknown letter counted even typed before.
+
+Fix:
+    + FIX #001-BUG#003: Javadocs are fixed.
+    + FIX #002-BUG#004: Method parameters fixed, char to String.
+    + FIX #003-BUG#006-#001: Fixed.
+    + FIX #004-BUG#002: Fixed.
+    + FIX #005-BUG#008: Fixed.
+    + FIX #006-BUG#007: Fixed.
+    + FIX #007-BUG#009: Fixed.
+
+
+
